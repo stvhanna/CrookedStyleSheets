@@ -12,9 +12,9 @@
 </head>
   <body>
     <div class="container">
-        <h1>Crooked Style Sheets <small>Websitetracking without JS only with CSS</small></h1>
-      
+        <h1>Crooked Style Sheets <small>Website tracking/analytics without JS only with CSS</small></h1>
         <hr>
+        
         <h2>Link tests</h2>
 
         <a href="http://google.de" id="link1" target="_blank">Link 1</a>
@@ -26,7 +26,7 @@
         <hr>
         <h2>Hover test</h2>
 
-      Hover about the fields with your mouse, so you can see how it can be tracked
+      Hover over the fields with your mouse, so you can see how it can be tracked.
 
         <table>
           <tr>
@@ -50,18 +50,34 @@
         </table>
 
         <hr>
+        
+        <h2>Hover duration time <small>Based on idea from <a href="https://github.com/jeyroik">jeyroik</a></small></h2>
 
-        <!-- This empty divs are used to determine information about the users system -->
+        <div id="duration" class="field">Duration field</div>
+
+        <hr>
+        <h2>Input tests <small>Note that you don't need to submit any form for data tracking</small></h2>
+        Input "test" (without quotes) in the following text box and it will be detected:
+        <input type="text" id="text_input" pattern="^test$" required>
+        <br>
+        <label><input type="checkbox" id="checkbox"> Check this box and it will be tracked</label>
+
+        <hr>
+
+        <!-- These empty divs are used to determine information about the users system -->
         <div id="type"></div>
         <div id="orientation"></div>
         <div id="width"></div>
         <div id="height"></div>
         <div id="chrome_detect"></div>
         <div id="firefox_detect"></div>
+        <div id="edge_detect"></div>
 
         <div id="font_detection1">test</div>
 
         <a href="results.php" target="_blank">Watch Results</a>
+
+        <br>
 
         <a href="track.php?action=reset" target="_blank">Reset results</a>
 

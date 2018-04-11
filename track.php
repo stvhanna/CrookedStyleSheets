@@ -12,6 +12,8 @@ if(!empty($_REQUEST['width']))
 if(!empty($_REQUEST['height']))
     $_SESSION['height'] = $_REQUEST['height'];
 
+if(!empty($_REQUEST['duration']))
+    $_SESSION['duration'] = $_REQUEST['duration'];
 
 switch($action)
 {
@@ -46,10 +48,18 @@ switch($action)
     case "browser_firefox":
         $_SESSION["browser_firefox"] = true;
         break;
+    case "browser_edge":
+        $_SESSION["browser_edge"] = true;
+        break;
     case "font1":
         $_SESSION["font1"] = false;
         break;
-
+    case "text_input":
+        $_SESSION["text_input"] = date(DATE_RFC822);
+        break;
+    case "checkbox":
+        $_SESSION["checkbox"] = date(DATE_RFC822);
+        break;
     case "reset":
         session_unset();
         print("Results were cleared!");
